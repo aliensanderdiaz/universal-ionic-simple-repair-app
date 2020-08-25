@@ -1,0 +1,94 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      REPARACIONES
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="floating">NOMBRE</ion-label>
+          <ion-input required [(ngModel)]="nombre"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <ion-label position="floating">CELULAR</ion-label>
+          <ion-input type="tel" required [(ngModel)]="celular"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+      <ion-item>
+        <ion-label position="floating">PRODUCTO</ion-label>
+        <ion-input required [(ngModel)]="producto"></ion-input>
+      </ion-item>
+    </ion-col>
+    </ion-row>
+
+    <ion-row>
+    <ion-col>
+        <ion-item>
+          <ion-label position="floating">DESCRIPCIÓN</ion-label>
+          <ion-textarea required [(ngModel)]="descripcion"></ion-textarea>
+        </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-label position="floating">TOTAL</ion-label>
+        <ion-input type="number" required (ionChange)="calcularSaldo()" [(ngModel)]="total"></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col>
+      <ion-item>
+        <ion-label position="floating">ABONO</ion-label>
+        <ion-input type="number" required (ionChange)="calcularSaldo()" [(ngModel)]="abono"></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col>
+      <ion-item>
+        <ion-label position="floating">SALDO</ion-label>
+        <ion-input type="number" readonly required [(ngModel)]="saldo"></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-button expand="block" size="large" (click)="correrCortar()">IMPRIMIR</ion-button>
+    </ion-col>
+  </ion-row>
+  </ion-grid>
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <ion-item>
+    <ion-label>IMPRESORA</ion-label>
+    <ion-select placeholder="Select One">
+      <ion-select-option value="f">JENNY</ion-select-option>
+      <ion-select-option value="m">cATHERINE</ion-select-option>
+    </ion-select>
+  </ion-item> -->
+
+  
+
+</ion-content>
